@@ -90,16 +90,14 @@ class Displaymethodpayments extends Module
 
     public function hookDisplayFooter()
     {
-        /* Place your code here. */
         $payment_methods = array();
-        $payment_methods[] = $this->trans('Bank Transfer', [], 'Modules.Displaymethodpayments.Methods');
-        $payment_methods[] = 'PAYPAL';
-        // foreach (PaymentModule::getInstalledPaymentModules() as $payment) {
-        //     $module = Module::getInstanceByName($payment['name']);
-        //     if (Validate::isLoadedObject($module) && $module->active) {
-        //         $payment_methods[] = $module->displayName;
-        //     }
-        // }
+        $root_str = 'https://gemmesterra.com/Botiga/modules/';
+        foreach (PaymentModule::getInstalledPaymentModules() as $payment) {
+            $module = Module::getInstanceByName($payment['name']);
+            if (Validate::isLoadedObject($module) && $module->active) {
+                $payment_methods[$module->displayName] = $root_str.$module->name.'/logo.png';
+            }
+        }
         $this->context->smarty->assign([
             'method_payments_title' => $this->trans('PAYMENT METHODS', [], 'Modules.Displaymethodpayments.Title'),
             'method_payments_list' => $payment_methods,
