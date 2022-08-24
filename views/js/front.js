@@ -26,8 +26,8 @@
 * to avoid any conflicts with others containers.
 */
 
-const target = document.querySelector("#payment_methods_target")
-const content = document.querySelector("#payment-methods")
+const paymentMethodsTarget = document.querySelector("#payment_methods_target")
+const paymentMethodsContent = document.querySelector("#payment-methods")
 target.onclick = () => {
     if (target.ariaExpanded === "false") {
         target.ariaExpanded = "true"
