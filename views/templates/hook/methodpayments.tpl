@@ -16,7 +16,7 @@
                 <div id="payment-methods" class="collapse">
                     <ul>
                         {foreach $method_payments_list as $method_payment => $logo}
-                            <li><img target={$test_str} src={$logo} alt="logo" width="35"/> {$method_payment}</li>
+                            <li><img src={$logo} alt="logo" width="35"/> {$method_payment}</li>
                         {/foreach}
                     </ul>
                 </div>

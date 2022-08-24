@@ -101,7 +101,6 @@ class Displaymethodpayments extends Module
         $this->context->smarty->assign([
             'method_payments_title' => $this->trans('PAYMENT METHODS', [], 'Modules.Displaymethodpayments.Title'),
             'method_payments_list' => $payment_methods,
-            'test_str' => $test_str,
         ]);
 
         return $this->display(__FILE__, 'methodpayments.tpl');
