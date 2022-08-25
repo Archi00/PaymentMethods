@@ -28,14 +28,14 @@
 
 const paymentMethodsTarget = document.querySelector("#payment_methods_target")
 const paymentMethodsContent = document.querySelector("#payment-methods")
-target.onclick = () => {
-    if (target.ariaExpanded === "false") {
-        target.ariaExpanded = "true"
-        content.ariaExpanded = "true"
-        content.classList.add("in")
+paymentMethodsTarget.onclick = () => {
+    if (paymentMethodsTarget.ariaExpanded === "false") {
+        paymentMethodsTarget.ariaExpanded = "true"
+        paymentMethodsContent.ariaExpanded = "true"
+        paymentMethodsContent.classList.add("in")
     } else {
-        target.ariaExpanded = "false"
-        content.ariaExpanded = "false"
-        content.classList.remove("in")
+        paymentMethodsTarget.ariaExpanded = "false"
+        paymentMethodsContent.ariaExpanded = "false"
+        paymentMethodsContent.classList.remove("in")
     }
 }
