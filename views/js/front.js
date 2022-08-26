@@ -26,16 +26,3 @@
 * to avoid any conflicts with others containers.
 */
 
-const paymentMethodsTarget = document.querySelector("#payment_methods_target")
-const paymentMethodsContent = document.querySelector("#payment-methods")
-paymentMethodsTarget.onclick = () => {
-    if (paymentMethodsTarget.ariaExpanded === "false") {
-        paymentMethodsTarget.ariaExpanded = "true"
-        paymentMethodsContent.ariaExpanded = "true"
-        paymentMethodsContent.classList.add("in")
-    } else {
-        paymentMethodsTarget.ariaExpanded = "false"
-        paymentMethodsContent.ariaExpanded = "false"
-        paymentMethodsContent.classList.remove("in")
-    }
-}
